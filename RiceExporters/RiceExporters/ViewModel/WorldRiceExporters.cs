@@ -86,17 +86,14 @@ namespace RiceExporters
                     if (model.Value < GroupTo)
                     {
                         double selectedItemsSum = ExportData.Where(item => item.Value < GroupTo).Sum(item => item.Value);
-
                         double selectedItemsPercentage = (selectedItemsSum / sum) * 100;
-                        selectedItemsPercentage = (selectedItemsPercentage * 100) / 100;
-                        Percentage = (double)selectedItemsPercentage;
+                        Percentage = selectedItemsPercentage;
                         Country = "Others";
                     }
                     else
                     {
                         double SelectedItemsPercentage = (model.Value / sum) * 100;
-                        SelectedItemsPercentage = (SelectedItemsPercentage * 100) / 100;
-                        Percentage = (double)SelectedItemsPercentage;
+                        Percentage = SelectedItemsPercentage;
                         Country = model.Country;
                     }
                 }

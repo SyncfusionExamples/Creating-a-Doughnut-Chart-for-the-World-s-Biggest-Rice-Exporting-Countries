@@ -50,12 +50,12 @@
                                 <Grid Margin="10">
                                     <Path Data="{StaticResource LegendData1}" Fill="{Binding Interior}">
                                         <Path.RenderTransform>
-                                            <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                         </Path.RenderTransform>
                                     </Path>
                                     <Path Data="{StaticResource LegendData2}" Fill="{Binding Interior}">
                                         <Path.RenderTransform>
-                                            <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
                                         </Path.RenderTransform>
                                     </Path>
                                 </Grid>
@@ -80,7 +80,6 @@
                             <SolidColorBrush Color="#8AC114"/>
                             <SolidColorBrush Color="#8419C7"/>
                         </chart:ChartColorModel.CustomBrushes>
-
                     </chart:ChartColorModel>
                 </chart:DoughnutSeries.ColorModel>
 
@@ -97,7 +96,7 @@
 
                             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,-3,0,0">
                                 <TextBlock FontSize="16" Text="{Binding  Country}"/>
-                                <TextBlock FontSize="16"  Text=" : "/>
+                                <TextBlock FontSize="16" Text=" : "/>
                                 <TextBlock FontSize="16" FontWeight="SemiBold" Text="{Binding Percentage,StringFormat={}{0:F2}%, Mode=TwoWay}"/>
                             </StackPanel>
 
