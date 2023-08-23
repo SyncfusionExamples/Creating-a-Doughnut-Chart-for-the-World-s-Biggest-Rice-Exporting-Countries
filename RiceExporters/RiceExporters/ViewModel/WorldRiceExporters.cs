@@ -15,7 +15,7 @@ namespace RiceExporters
     public class WorldRiceExporters
     {
         public List<RiceExporterModel> ExportData { get; set; }
-        private double groupTo = 2;
+        private double groupTo = 2; //For values of 2 million or less
         private string country;
         private double percentage;
         private int selectedIndex;

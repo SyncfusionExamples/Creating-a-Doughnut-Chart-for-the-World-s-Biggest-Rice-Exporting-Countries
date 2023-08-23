@@ -9,12 +9,12 @@ namespace RiceExporters
     public class RiceExporterModel
     {
         public string Country { get; set; }
-        public Double Value { get; set; }
+        public double Value { get; set; }
 
-        public RiceExporterModel(string country, Double value)
+        public RiceExporterModel(string country, double value)
         {
             Country = country;
-            Value = value/1000;
+            Value = value/1000; //Thousand to million conversion
         }
     }
 }
