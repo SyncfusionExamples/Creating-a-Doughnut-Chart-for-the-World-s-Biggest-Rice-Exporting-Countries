@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         xmlns:local="clr-namespace:RiceExporters"
-        mc:Ignorable="d">
+        mc:Ignorable="d" StateChanged="Window_StateChanged">
 
     <Border Margin="50" Padding="10,10,50,20" BorderThickness="2" CornerRadius="10" BorderBrush="#b0b8bf">
 
@@ -37,7 +37,7 @@
                     <StackPanel Orientation="Vertical" Margin="0,10,0,0" Background="#1060DC"/>
                     <StackPanel Grid.Column="1" Margin="3,0,0,0">
                         <TextBlock Text="The World's Biggest Exporters of Rice" FontSize="35" FontWeight="SemiBold" Foreground="Black"/>
-                        <TextBlock Text="Biggest exporters of rice worldwide in 2022 (in million tons)" FontSize="20" Foreground="Gray"/>
+                        <TextBlock Text="Biggest exporters of rice worldwide in 2022 (in tons)" FontSize="20" Foreground="Gray"/>
                     </StackPanel>
                 </Grid>
             </chart:SfChart.Header>
@@ -85,31 +85,33 @@
 
                 <chart:DoughnutSeries.CenterView >
                     <ContentControl>
-                        <Grid Margin="5">
+                        <Grid Margin="5" x:Name="grid">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <TextBlock Grid.Row="0" FontSize="16" Text="Percent of" Margin="0,-30,0,0" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Row="0" FontSize="12" HorizontalAlignment="Center" x:Name="text" Width="165">
+                                   <TextBlock Margin="65,3,0,0">Percent</TextBlock>
+                                       <LineBreak/>   <TextBlock Margin="45,3,0,0"> contributed by </TextBlock>
+                            </TextBlock>
 
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,-3,0,0">
-                                <TextBlock FontSize="16" Text="{Binding  Country}"/>
-                                <TextBlock FontSize="16" Text=" : "/>
-                                <TextBlock FontSize="16" FontWeight="SemiBold" Text="{Binding Percentage,StringFormat={}{0:F2}%, Mode=TwoWay}"/>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,2,0,0" x:Name="valueText">
+                                <TextBlock FontSize="12" Text="{Binding StringFormat=' {0}:', Path=Country,Mode=TwoWay}" />
+                                <TextBlock FontSize="12" Text="{Binding StringFormat=' {0:F2}%', Path=Percentage,Mode=TwoWay}" />
                             </StackPanel>
 
-                            <StackPanel Grid.Row="2" Margin="0,20,0,0" Orientation="Horizontal">
-                                <Path Data="{StaticResource PathData1}" Stroke="{Binding SelectedIndex, Converter={StaticResource explodeColorConverter}}" StrokeThickness="0.7" Margin="0,0,20,0">
+                            <StackPanel Grid.Row="2" Margin="0,15,0,0" Orientation="Horizontal" HorizontalAlignment="Center" x:Name="path">
+                                <Path Data="{StaticResource PathData1}" Stroke="{Binding SelectedIndex, Converter={StaticResource explodeColorConverter}}" StrokeThickness="0.7" Margin="15,0,0,0">
                                     <Path.RenderTransform>
-                                        <ScaleTransform ScaleX="1.5" ScaleY="1.3" />
+                                        <ScaleTransform ScaleX="0.75" ScaleY="0.6" />
                                     </Path.RenderTransform>
                                 </Path>
 
                                 <Path Data="{StaticResource PathData2}" Stroke="{Binding SelectedIndex, Converter={StaticResource explodeColorConverter}}" StrokeThickness="0.7">
                                     <Path.RenderTransform>
-                                        <ScaleTransform ScaleX="1.5" ScaleY="1.3" />
+                                        <ScaleTransform ScaleX="0.75" ScaleY="0.6" />
                                     </Path.RenderTransform>
                                 </Path>
                             </StackPanel>
