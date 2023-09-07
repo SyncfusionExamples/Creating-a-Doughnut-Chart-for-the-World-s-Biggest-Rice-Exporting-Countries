@@ -12,5 +12,6 @@ In 2022, rice exports were 55.64 million tons, which is 0.48 million tons less t
 
 This article explains how to create a doughnut chart to visualize the largest rice exporting countries in the world.
 
+![Demo](https://github.com/SyncfusionExamples/Creating-a-Doughnut-Chart-for-the-World-s-Biggest-Rice-Exporting-Countries/assets/103025761/f5bcc41c-496a-43f6-a4e0-e5458fb1096b)
 
 For a step-by-step procedure, refer to the Rice Export Doughnut Blog.
