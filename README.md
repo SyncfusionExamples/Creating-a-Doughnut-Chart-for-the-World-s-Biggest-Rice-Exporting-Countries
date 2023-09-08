@@ -14,4 +14,4 @@ This article explains how to create a doughnut chart to visualize the largest ri
 
 ![Demo](https://github.com/SyncfusionExamples/Creating-a-Doughnut-Chart-for-the-World-s-Biggest-Rice-Exporting-Countries/assets/103025761/f5bcc41c-496a-43f6-a4e0-e5458fb1096b)
 
-For a step-by-step procedure, refer to the Rice Export Doughnut Blog.
+For a step-by-step procedure, refer to the [Rice Export Doughnut Blog](https://www.syncfusion.com/blogs/post/wpf-doughnut-chart-rice-exporting-countries.aspx).
