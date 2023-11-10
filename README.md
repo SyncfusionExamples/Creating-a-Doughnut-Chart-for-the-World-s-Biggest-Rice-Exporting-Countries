@@ -1,9 +1,5 @@
  # Creating a Doughnut Chart for the World's Biggest Rice Exporting Countries
 
- ## Troubleshooting
-#### Path too long exception
-If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
-
 ## Description 
 The doughnut chart is used to show the relationship between parts of the data and the whole data.
 
@@ -18,5 +14,9 @@ In 2022, rice exports were 55.64 million tons, which is 0.48 million tons less t
 This article explains how to create a doughnut chart to visualize the largest rice exporting countries in the world.
 
 ![Demo](https://github.com/SyncfusionExamples/Creating-a-Doughnut-Chart-for-the-World-s-Biggest-Rice-Exporting-Countries/assets/103025761/f5bcc41c-496a-43f6-a4e0-e5458fb1096b)
+
+ ## Troubleshooting
+#### Path too long exception
+If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
 For a step-by-step procedure, refer to the [Rice Export Doughnut Blog](https://www.syncfusion.com/blogs/post/wpf-doughnut-chart-rice-exporting-countries.aspx).
