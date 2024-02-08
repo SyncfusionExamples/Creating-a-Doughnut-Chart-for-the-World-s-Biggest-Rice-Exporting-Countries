@@ -67,8 +67,8 @@
             </chart:SfChart.Legend>
 
             <chart:DoughnutSeries ItemsSource="{Binding ExportData}" XBindingPath="Country" YBindingPath="Value" 
-                                  DoughnutSize="1" Stroke="White" StrokeThickness="1" Palette="Custom" GroupTo="{Binding GroupTo}" 
-                                  ExplodeIndex="{Binding SelectedIndex, Mode=TwoWay}" ExplodeOnMouseClick="True" ExplodeRadius="10">
+                                DoughnutSize="1" Stroke="White" StrokeThickness="1" Palette="Custom" GroupTo="{Binding GroupTo}" 
+                                ExplodeIndex="{Binding SelectedIndex, Mode=TwoWay}" ExplodeOnMouseClick="True" ExplodeRadius="10">
 
                 <chart:DoughnutSeries.ColorModel>
                     <chart:ChartColorModel>
@@ -124,7 +124,8 @@
                 </chart:DoughnutSeries.AdornmentsInfo>
 
             </chart:DoughnutSeries>
-         
+
         </chart:SfChart>
     </Border>
+
 </Window>
